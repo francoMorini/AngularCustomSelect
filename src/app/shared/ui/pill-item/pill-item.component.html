@@ -1,0 +1,7 @@
+@if(!!image){
+<img [src]="image">
+}
+<div>{{name}}</div>
+@if(closeButton){
+<i (click)="closePressed.emit()" class="bi bi-x"></i>
+}

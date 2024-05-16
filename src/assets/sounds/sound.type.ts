@@ -1,0 +1,1 @@
+export type SoundType = 'special' | 'move' | 'select';

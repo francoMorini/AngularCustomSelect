@@ -1,0 +1,17 @@
+<div class="title-container">
+    <div class="title">
+        <i class="bi bi-keyboard-fill"></i>
+        <span>Control this with some keys</span>
+    </div>
+    <div class="title-items">
+        <div>⬇️⬆️ Arrow up and down to move between options</div>
+        <div>🗑️ Escape for clean and close</div>
+        <div>🎯 Enter to select an option</div>
+    </div>
+</div>
+<div class="container">
+    <app-input-select placeholder="Pikachu, Charizard, or just type *" (itemReturned)="setPokemon($event)" [(ngModel)]="value" (ngModelChange)="onChange($event)" [items]="pokemons"></app-input-select>
+</div>
+@if(!!pokemonSelected()){
+    <app-card [pokemon]="pokemonSelected()!"></app-card>
+}

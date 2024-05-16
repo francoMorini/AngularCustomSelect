@@ -1,0 +1,20 @@
+@if(!!label && !(!!itemSelected)){
+<label for="input">{{label}}</label>
+}
+<div appArrowKeysPressed (isMovingUp)="moveItemIndex($event)" specialsKeysPressed
+    (escapePressed)="items = []; removeItemSelected()" (enterPressed)="enterIsPressed()" appClickOutside
+    (outsideClick)="isDropListOpen = $event" class="container">
+
+    <div class="input-container">
+        <input #input [placeholder]="placeholder" id="input" autofocus type="text" [(ngModel)]="value" (ngModelChange)="onChange($event)" autocomplete="off">
+        @if(!!itemSelected){
+        <app-pill-item [name]="itemSelected.name" [image]="itemSelected.image" [closeButton]="true"
+            (closePressed)="removeItemSelected()"></app-pill-item>
+        } @else {
+        <i class="bi bi-caret-down-fill"></i>
+        }
+    </div>
+    <app-drop-list #dropList [itemFocused]="itemFocused" (itemPressed)="addItemSelected(items[$event])"
+        [isOpen]="isDropListOpen" [items]="(items.length > 0) ? items : undefined"></app-drop-list>
+
+</div>

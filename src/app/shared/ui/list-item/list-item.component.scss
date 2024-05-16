@@ -1,0 +1,25 @@
+.container {
+  width: 95%;
+  margin: 0.25rem auto;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--contrast);
+}
+
+.focused {
+  outline: var(--contrast) dashed 2px;
+}

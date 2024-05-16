@@ -1,0 +1,7 @@
+@if(!!items && isOpen){
+<div class="container">
+    @for (item of items; track $index) {
+    <app-list-item [focused]="($index === itemFocused)" (click)="itemPressed.emit($index)" [name]="item.name" [image]="item.image"></app-list-item>
+    }
+</div>
+}

@@ -1,0 +1,13 @@
+@if(!!pokemon){
+<div class="card" [ngClass]="{'favourite': pokemon.name == 'haunter'}">
+    <div class="name">{{pokemon.name}}</div>
+    <div class="container">
+        <img class="pokemon" [src]="pokemon.image">
+        <div class="stats-container">
+            <app-stats [value]="pokemon.stats.hp" type="hp"></app-stats>
+            <app-stats [value]="pokemon.stats.atk" type="atk"></app-stats>
+            <app-stats [value]="pokemon.stats.def" type="def"></app-stats>
+        </div>
+    </div>
+</div>
+}
