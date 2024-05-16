@@ -10,7 +10,7 @@
     </div>
 </div>
 <div class="container">
-    <app-input-select placeholder="Pikachu, Charizard, or just type *" (itemReturned)="setPokemon($event)" [(ngModel)]="value" (ngModelChange)="onChange($event)" [items]="pokemons"></app-input-select>
+    <app-input-select label="Pikachu, Charizard, or just type *" (itemReturned)="setPokemon($event)" [(ngModel)]="value" (ngModelChange)="onChange($event)" [items]="pokemons"></app-input-select>
 </div>
 @if(!!pokemonSelected()){
     <app-card [pokemon]="pokemonSelected()!"></app-card>

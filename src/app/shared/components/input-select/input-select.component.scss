@@ -9,12 +9,16 @@
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
+    overflow: hidden;
+}
+.input-container > * {
+    flex-shrink: 1;
+    flex-grow: 0;
 }
 .input-container{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-    justify-content: space-between;
     align-items: center;
     border-radius: 50rem;
     font-size: 1rem;
@@ -24,7 +28,8 @@
     input{
         background-color: transparent;
         border: none;
-        flex: 1;
+        flex-shrink: 1;
+        flex-grow: 1;
         font-size: 1.1rem;
     }
 }
