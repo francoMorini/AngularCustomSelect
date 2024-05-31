@@ -10,7 +10,7 @@ export class FocusedDirective {
   
   @Input() set focused(value: boolean) {
     if(value){
-      this._renderer.selectRootElement(this._element).nativeElement.scrollIntoView({ block: "end" });
+      this._renderer.selectRootElement(this._element).nativeElement.scrollIntoView({ block: "center", behavior: 'smooth' });
     }
   }
 }
